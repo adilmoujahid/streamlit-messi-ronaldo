@@ -14,6 +14,11 @@
 - You'll need to install ```Bokeh``` and ```Streamlit``` using the following commands:
 
 * ```conda install -c bokeh bokeh```
- * ```pip install streamlit```
+* ```pip install streamlit```
+
+# Run the App
+
+* From your terminal, execute: ```streamlit run app.py```
+* Open ```http://localhost:8501``` in your browser
 
 # Visit my Blog : http://adilmoujahid.com
