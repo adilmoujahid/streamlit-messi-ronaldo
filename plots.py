@@ -1,3 +1,14 @@
+
+'''
+title           : plots.py
+description     : Drawing football pitch and events. 
+author          : Adil Moujahid
+date_created    : 20200521
+date_modified   : 20200613
+version         : 1.0
+python_version  : 3.7.6
+'''
+
 import bokeh
 from bokeh.plotting import figure
 from bokeh.models import ColumnDataSource

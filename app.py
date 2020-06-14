@@ -1,3 +1,14 @@
+'''
+title           : app.py
+description     : Streamlit app that compares Messi and Ronaldo's stats and shows their positions on the pitch.
+author          : Adil Moujahid
+date_created    : 20200521
+date_modified   : 20200613
+version         : 1.0
+usage           : streamlit run app.py
+python_version  : 3.7.6
+'''
+
 import datetime
 import unicodedata
 
@@ -228,21 +239,28 @@ if __name__ == '__main__':
         unsafe_allow_html=True,
     )
 
-    st.sidebar.markdown(""" # Messi vs. Ronaldo """)
 
-    #st.sidebar.image('./data/messi_ronaldo_1.png', use_column_width=True, format='PNG')
     foot = st.sidebar.radio("Foot", ('Either Left or Right', 'Left', 'Right'))
+    messi_events_data_df, ronaldo_events_data_df, barca_matches_dates_df, real_matches_dates_df = get_data(foot)
 
+    #Calculate Stats of both playters and structure them in a Pandas DataFrame
+    goals = [messi_events_data_df['goal'].sum(), ronaldo_events_data_df['goal'].sum()]
+    assists = [messi_events_data_df['assist'].sum(), ronaldo_events_data_df['assist'].sum()]
+    shots = [messi_events_data_df[messi_events_data_df['eventName'] == 'Shot'].count()['eventName'],
+             ronaldo_events_data_df[ronaldo_events_data_df['eventName'] == 'Shot'].count()['eventName']]
+    free_kicks = [messi_events_data_df[messi_events_data_df['subEventName'] == 'Free kick shot'].count()['subEventName'], 
+                messi_events_data_df[messi_events_data_df['subEventName'] == 'Free kick shot'].count()['subEventName']]
+    passes = [messi_events_data_df[messi_events_data_df['eventName'] == 'Pass'].count()['eventName'],
+            ronaldo_events_data_df[ronaldo_events_data_df['eventName'] == 'Pass'].count()['eventName']]
+
+    stats_df = pd.DataFrame([goals, assists, shots, free_kicks, passes],
+                            columns=['Messi', 'Ronaldo'], 
+                            index=['Goals', 'Assists', 'Shots', 'Free Kicks', 'Passes'])
 
     st.sidebar.markdown(""" ### Stats """)
-    
-    df = pd.DataFrame(np.random.randn(5, 2),
-                    columns=['Messi', 'Ronaldo'], 
-                    index=['Goals', 'Assists', 'Shots', 'Free Kicks', 'Passes'])
-    st.sidebar.dataframe(df)
+    st.sidebar.dataframe(stats_df)
 
-
-    messi_events_data_df, ronaldo_events_data_df, barca_matches_dates_df, real_matches_dates_df = get_data(foot)
+    st.image('./messi_ronaldo.png', use_column_width=True, format='PNG')
 
     tabs = bokeh.models.Tabs(
         tabs=[
