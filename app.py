@@ -249,7 +249,7 @@ if __name__ == '__main__':
     shots = [messi_events_data_df[messi_events_data_df['eventName'] == 'Shot'].count()['eventName'],
              ronaldo_events_data_df[ronaldo_events_data_df['eventName'] == 'Shot'].count()['eventName']]
     free_kicks = [messi_events_data_df[messi_events_data_df['subEventName'] == 'Free kick shot'].count()['subEventName'], 
-                messi_events_data_df[messi_events_data_df['subEventName'] == 'Free kick shot'].count()['subEventName']]
+                ronaldo_events_data_df[ronaldo_events_data_df['subEventName'] == 'Free kick shot'].count()['subEventName']]
     passes = [messi_events_data_df[messi_events_data_df['eventName'] == 'Pass'].count()['eventName'],
             ronaldo_events_data_df[ronaldo_events_data_df['eventName'] == 'Pass'].count()['eventName']]
 
