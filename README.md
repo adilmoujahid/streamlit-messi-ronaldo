@@ -21,4 +21,9 @@
 * From your terminal, execute: ```streamlit run app.py```
 * Open ```http://localhost:8501``` in your browser
 
+# References
+[1] Pappalardo et al., (2019) A public data set of spatio-temporal match events in soccer competitions, Nature Scientific Data 6:236, https://www.nature.com/articles/s41597-019-0247-7
+
+[2] https://figshare.com/articles/Events/7770599
+
 # Visit my Blog : http://adilmoujahid.com
