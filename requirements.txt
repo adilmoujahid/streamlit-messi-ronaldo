@@ -1,0 +1,5 @@
+markdown
+numpy
+pandas
+bokeh == 2.0.2
+streamlit == 0.59.0
