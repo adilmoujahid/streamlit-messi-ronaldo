@@ -9,12 +9,9 @@
 # Dependencies
 
 - Works with ```Python 3.7``` 
-- You'll need the following libraries: ```Numpy```, ```Pandas```, ```Bokeh``` and ```Streamlit```
-- I recommend using [Anaconda's Python distribution](https://www.continuum.io/downloads). Anaconda has ```Numpy``` and ```Pandas``` installed.
-- You'll need to install ```Bokeh``` and ```Streamlit``` using the following commands:
+- All Python dependencies are in ```requirements.txt```. You can install these dependencies by running the following command:
 
-* ```conda install -c bokeh bokeh```
-* ```pip install streamlit```
+* ```pip install -r requirements.txt```
 
 # Run the App
 
