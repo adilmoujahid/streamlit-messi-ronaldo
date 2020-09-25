@@ -260,6 +260,10 @@ if __name__ == '__main__':
     st.sidebar.markdown(""" ### Stats """)
     st.sidebar.dataframe(stats_df)
 
+    st.sidebar.markdown("""  """)
+    st.sidebar.markdown("""  """)
+    st.sidebar.markdown(""" ### Checkout out this [tutorial](http://adilmoujahid.com/posts/2020/06/streamlit-messi-ronaldo/) to learn how this app was built  """)
+
     st.image('./messi_ronaldo.png', use_column_width=True, format='PNG')
 
     tabs = bokeh.models.Tabs(
