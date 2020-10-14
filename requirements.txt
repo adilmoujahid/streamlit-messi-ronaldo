@@ -2,4 +2,4 @@ markdown
 numpy
 pandas
 bokeh == 2.0.2
-streamlit == 0.59.0
+streamlit-0.68.0-py2.py3-none-any.whl
