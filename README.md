@@ -1,4 +1,4 @@
-# Analyzing Messi and Ronaldo's Games using Python and Streamlit
+# Analyzing Messi and Ronaldo's Games using Python and Streamlit [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/adilmoujahid/streamlit-messi-ronaldo/master/app.py/+/)
 
 * Source Code for my blog post: [Analyzing Messi and Ronaldo's Games using Python and Streamlit](http://adilmoujahid.com/posts/2020/06/streamlit-messi-ronaldo/)
 
