@@ -1,5 +1,5 @@
 markdown
 numpy
 pandas
-bokeh == 2.0.2
+bokeh == 3.8.2
 streamlit-0.68.0-py2.py3-none-any.whl
